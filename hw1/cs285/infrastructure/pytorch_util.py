@@ -47,7 +47,15 @@ def build_mlp(
 
     # TODO: return a MLP. This should be an instance of nn.Module
     # Note: nn.Sequential is an instance of nn.Module.
-    raise NotImplementedError
+    mlp = nn.Sequential()
+    mlp.add_module(nn.Linear(input_size, size))
+    mlp.add_module(activation)
+    for _ in range(n_layers - 1):
+        mlp.add_module(nn.Linear(size, size))
+        mlp.add_module(activation)
+    mlp.add_module(nn.Linear(size, output_size))
+    mlp.add_module(output_activation)
+    return mlp
 
 
 device = None
