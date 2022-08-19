@@ -1,8 +1,10 @@
+#==2.3.0
+#==1.8
 numpy
 gym==0.17.2
-mujoco-py==2.0.2.2
-tensorboard==2.3.0
-tensorboardX==1.8
+mujoco-py==2.0.2.8
+tensorboard
+tensorboardX
 matplotlib==2.2.2
 ipython==6.4.0
 moviepy==1.0.0
